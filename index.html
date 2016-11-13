@@ -1,12 +1,29 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <title>Hello World</title>
-    </head>
-    <body>
-        <h1>ask a question</h1>
-        <p>Is this working?</p>
-        <p>let's try that again</p>
-        <h2>so now it's working?</h2>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+  </head>
+<body ng-app="LunchCheck">
+   <div class="container" ng-controller="LunchCheckController">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control" ng-model="food">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           <!-- Your message can go here. -->
+         </div>
+   </div>
+   <script src="angular.min.js"></script>
+</body>
 </html>
