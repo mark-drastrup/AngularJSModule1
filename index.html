@@ -7,6 +7,8 @@
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
+    <script src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </head>
 <body ng-app="LunchCheck">
    <div class="container" ng-controller="LunchCheckController">
@@ -15,15 +17,15 @@
          <div class="form-group">
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control" ng-model="food">
+             class="form-control" ng-model="foodInput">
          </div>
          <div class="form-group">
-             <button class="btn btn-default" ng-click="">Check If Too Much</button>
+             <button class="btn btn-default" ng-click="lunchCheck()">Check If Too Much</button>
          </div>
          <div class="form-group message">
            <!-- Your message can go here. -->
+           {{ messageToUser }}
          </div>
    </div>
-   <script src="angular.min.js"></script>
 </body>
 </html>
